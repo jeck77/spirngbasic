@@ -1,5 +1,6 @@
 package hello.core.order;
 
+import hello.core.annotation.MainDiscountPolicy;
 import hello.core.discount.DiscountPolicy;
 import hello.core.discount.FixDiscountPolicy;
 import hello.core.discount.RateDiscountPolicy;
@@ -29,7 +30,7 @@ public class OrderServiceImpl implements OrderService {
     // 2. Quilifier 추가 구분자를 붙여주는 방법 discountPolicy -> @Qualifier("mainDiscountPolicy") DiscountPolicy discountPolicy
     // 3. Primary 우선순위를 지정한다.
     @Autowired
-    public OrderServiceImpl( MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+    public OrderServiceImpl( MemberRepository memberRepository, @MainDiscountPolicy DiscountPolicy discountPolicy) {
         this.discountPolicy = discountPolicy;
         this.memberRepository = memberRepository;
     }
