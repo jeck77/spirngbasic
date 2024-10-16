@@ -8,7 +8,7 @@ public class MemberServiceImpl implements MemberService {
 
     private MemberRepository memberRepository;
 
-    @Autowired // ac.getBean(MemberRepository.class)
+    //@Autowired // ac.getBean(MemberRepository.class)
     public MemberServiceImpl(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }

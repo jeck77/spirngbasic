@@ -16,8 +16,9 @@ public class OrderServiceImpl implements OrderService {
     // private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
     // private final DiscountPolicy discountPolicy = new RateDiscountPolicy();
 
-    private MemberRepository memberRepository;
-    private DiscountPolicy discountPolicy;
+    // 생성자 주입 방식으로 final을 붙일 수 있음
+    private final MemberRepository memberRepository;
+    private final DiscountPolicy discountPolicy;
 
     @Autowired
     public OrderServiceImpl( MemberRepository memberRepository, DiscountPolicy discountPolicy) {
