@@ -50,7 +50,8 @@ public class SingletonWithPrototypeTest1 {
         // ObjectFactory  : 기능 단순, 별도 라이브러리 없음, 스프링에 의존
         // ObjectProvider :  ObjectFactory 상속, 옵션, 스트림 처리 편의기능 제공, 별도 라이브러리 없음, 스프링에 의존
         // 4.  javax.inject.Provider 라는 JSR-330 사용
-        // 단점 : 그리들에 추가해줘야함.
+        // get 하나만 있다.
+        // 단점 : 별도의 라이브러리를 설치해줘야힘
         @Autowired
         private ObjectProvider<PrototypeBean> prototypeBeanProvider;
 
